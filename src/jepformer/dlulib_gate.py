@@ -26,8 +26,8 @@ def audit_archive(archive_path, enforce_pinned_md5=True):
            for role in ('train_all','train_mean','test')}
     zip_entries=[]
     with zipfile.ZipFile(path) as z:
-        bad=z.testzip()
-        if bad is not None:raise ValueError('ZIP CRC failure: '+bad)
+        # Intentionally do not call testzip(): it would decompress test workbooks.
+        # Official archive MD5 instead authenticates the entire ZIP without reading sheets.
         for meta in z.infolist():
             if meta.is_dir():continue
             # No decompression of XLSX/test worksheet bytes; file listing only.
