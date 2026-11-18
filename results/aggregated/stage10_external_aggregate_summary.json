@@ -1,0 +1,67 @@
+{
+  "study": "Stage10 first-use DLULIB six-method numerical error forecast",
+  "scope": "one new building three floors; test scans at same training RP XY, not new-location generalization",
+  "n_scans": 6500,
+  "n_targets": 39000,
+  "n_RPs": 650,
+  "n_floor": 3,
+  "model_aggregation": "three-seed *metrics* averaged, no prediction ensemble",
+  "source_trained_numerical_error_models_retrained_on_target": false,
+  "position_estimators_fitted_on_target_training_only": true,
+  "source_test_labels_scored_after_prediction_hash_freeze": true,
+  "GT_access_restriction": "separate scorer opened sealed labels only after verifying frozen hash manifest",
+  "pooled_models": {
+    "CatBoost": {
+      "learner": "CatBoost",
+      "seed": "fixed2026",
+      "n": 39000,
+      "forecast_mae_m": 2.5464727627805237,
+      "forecast_rmse_m": 3.4253870789685053,
+      "forecast_bias_m": 0.22985725542186247,
+      "realized_position_error_mean_m": 4.832669576666966,
+      "spearman_forecast_actual": 0.34839682711493813,
+      "severe_n": 3363,
+      "severe_share": 0.08623076923076924,
+      "severe_forecast_mae_m": 6.674307095266428,
+      "severe_underpredict_fraction": 0.9821587867975022,
+      "mean_severe_true_error_m": 13.529403588704579,
+      "severe_auroc": 0.7490044888896932,
+      "severe_average_precision": 0.26839361987966726
+    },
+    "JEPFormer_3seed_mean": {
+      "seed": 21.0,
+      "n": 39000,
+      "forecast_mae_m": 2.426027878520792,
+      "forecast_rmse_m": 3.4651191335029483,
+      "forecast_bias_m": -0.6585514067568424,
+      "realized_position_error_mean_m": 4.832669576666966,
+      "spearman_forecast_actual": 0.4088448192724883,
+      "severe_n": 3363,
+      "severe_share": 0.08623076923076924,
+      "severe_forecast_mae_m": 7.125172831531969,
+      "severe_underpredict_fraction": 0.9642184557438794,
+      "mean_severe_true_error_m": 13.529403588704577,
+      "severe_auroc": 0.7757009185023779,
+      "severe_average_precision": 0.2829024545517919,
+      "seed_count": 3
+    }
+  },
+  "paired_RP_bootstrap_jep_minus_cat_forecast_MAE_m": {
+    "difference": -0.12044488425973147,
+    "interval_95": [
+      -0.1621043545850499,
+      -0.07781068768307152
+    ],
+    "n_clusters": 650,
+    "boot_replicates": 4000,
+    "note": "one dataset, RP-level descriptive CI; no cross-family generalization guarantee"
+  },
+  "input_freeze": {
+    "freeze_sha256": "619979a10551064e17531fabeb8fc04ede35314ded6db474ffbe89c8a75df100",
+    "prescore_manifest_sha256": "a9f364bc33b46519c6c4019de65e3bb5293d918fdf0448a8a7c2df3b36982e4f",
+    "test_parser_sha256": "fe02eb528a1bfdfeaf9b96b8f45dfd291561192ec247e7bf118fa66eb833c34f"
+  },
+  "DLULIB_zip_sha256": "bfa13bd1ae48dd9b636fcf1313ceb4ce25aa4b6495880ab8b4f689dbafad0953",
+  "publication_status": "first-use model evaluation performed; same-RP new collection, one building; no claim of unobserved-location transfer",
+  "privacy": "Aggregate only; no scan IDs, AP observations, exact positions, per-scan errors or model weights"
+}
