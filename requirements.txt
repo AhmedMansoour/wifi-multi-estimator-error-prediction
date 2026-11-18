@@ -4,3 +4,4 @@ scikit-learn>=1.4
 catboost>=1.2
 torch>=2.2
 pytest>=8
+openpyxl>=3.1
