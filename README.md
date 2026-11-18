@@ -30,3 +30,7 @@ The repository was initialized before the full empirical release audit. **Only p
 **Not released:** private Hong Kong BSSIDs, observed scans, floor-plan images/vectors, reconstructable building geometry or coordinates, private empirical tensors, or uncleared checkpoints. Public benchmark data will be obtained from their publishers according to licenses; synthetic examples are not substitutes for experimental validation.
 
 See the source-evidence notes and privacy policy before using this work. The manuscript and supplementary files will be versioned after scientific and confidentiality clearance.
+
+### Stage 6: retrospective whole-family-exclusion validation (18 November 2026)
+
+A newly completed six-family exclusion analysis retrains both learners on five historical dataset families and evaluates on the sixth, with 33 versus 21 descriptors. Scan-weighted full-input forecast MAE: **JEPFormer 2.359 m (three-seed average)**; **CatBoost 2.489 m (one seed)**. Removing the 12 cross-estimator geometry descriptors increases these values to 3.261 m and 3.356 m, respectively. Each of the six source families was previously inspected in historical development; these results are **retrospective transfer diagnostics, not a newly untouched independent test**. [Protocol and all aggregate family results](docs/STAGE6_RETROSPECTIVE_FAMILY_EXCLUSION.md).
