@@ -11,3 +11,7 @@
 ### Stage 8 reproduction boundary
 
 Generic availability-aware training utilities and synthetic invariance tests now run publicly. Aggregate source-test comparisons and a post hoc matched-budget control are in three nonidentifying CSV tables. Exact empirical reproduction requires the restricted source radio maps, original checkpoint/feature-provenance records, original anchor coordinate derivation, frozen weights, private validation outputs and archived scoring scripts stored in owner-only Drive. The repository is not a substitute for all raw empirical artifacts. Dataset licenses and indoor geometry/privacy checks remain release blockers.
+
+### Stage9 public verification status
+
+Combined Stage8 plus Stage9 synthetic tests passed 15/15 locally. Stage9 adds no source-model fitting or adjustment, only post-inference metrics and an archive-file listing gate. The 48-row model/outage/threshold aggregate and six-family outputs are public; empirical raw inputs and 168 frozen scenario prediction arrays remain restricted. The proposed DLULIB ZIP was not retrieved; its original worksheet schema, feature-equivalence checks, and independent external MAE are not verified. Thus full empirical public reproducibility and prospective generalization remain OPEN.
