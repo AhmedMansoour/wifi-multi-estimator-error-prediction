@@ -18,3 +18,10 @@
 **Primary inputs:** 14 scan/radio-map descriptors, 12 cross-estimator geometry, 7 local RP descriptors + 33 missingness flags, six candidate estimates in fixed estimator order. Ground-truth coordinates/true errors are training targets or evaluation labels, never inference features. Original source split: 5,450 / 4,089 / 4,090 scans across ten units and six families. Preserve source SHA256 and per-run prediction hashes privately until release permissions are verified.
 
 **Scientific boundary:** Numerical error forecasts are not calibrated integrity bounds, and a lower error-forecast MAE does not establish lower selected-coordinate error.
+
+## Stage 8 retrospective availability-aware retraining (19 November 2026)
+
+- Method: four versions per source-development scan (full, 1-, 2-, 3-estimator outage), three JEPFormer seeds and one pooled CatBoost seed; retrospective source test only.
+- A fourfold full-input repetition comparator was added AFTER the initial Stage8 scores (post hoc). A causal effect attributable uniquely to augmentation is therefore not fully isolated.
+- Evidence: exact original diagnostic-anchor geometry restored; frozen checkpoint/prediction hashes and seed-level metrics saved only in owner-only research Drive archive. Public: aggregate model comparisons, generic augmentation/masking code, tests, methods and limitations.
+- Scientific classification: retrospective robustness stress; DOES NOT validate a new untouched environment, arbitrary estimator set size, replacement methods, safety bounds or selected-coordinate accuracy.
