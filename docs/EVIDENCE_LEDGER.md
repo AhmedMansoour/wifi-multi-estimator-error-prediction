@@ -25,3 +25,9 @@
 - A fourfold full-input repetition comparator was added AFTER the initial Stage8 scores (post hoc). A causal effect attributable uniquely to augmentation is therefore not fully isolated.
 - Evidence: exact original diagnostic-anchor geometry restored; frozen checkpoint/prediction hashes and seed-level metrics saved only in owner-only research Drive archive. Public: aggregate model comparisons, generic augmentation/masking code, tests, methods and limitations.
 - Scientific classification: retrospective robustness stress; DOES NOT validate a new untouched environment, arbitrary estimator set size, replacement methods, safety bounds or selected-coordinate accuracy.
+
+## Stage9 — frozen-model severe-error audit and external data eligibility
+
+Completed: post hoc diagnostic replay from Stage8 immutable prediction tensors and the previously inspected historical source-test labels, using actual-error thresholds >=7/10/20 m and all 41 outage patterns. Public: deterministic scoring code, synthetic tests, two non-identifying aggregate tables and scientific limitations. Restricted: exact source labels, per-scan predictions, radio maps, and hashes in owner-only Drive.
+
+DLULIB first-use external candidate has documented three-floor separate training/test observations; the 6.1 MB archive has not been downloaded or scored in this runtime, so exact feature schema and all JEPFormer/CatBoost external metrics remain UNVERIFIED. A future independent test must freeze source-compatible features and original model outputs before reading any test XY.
